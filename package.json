@@ -1,0 +1,27 @@
+{
+  "name": "polybius",
+  "version": "1.0.0",
+  "description": "Web archiving for journalists",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "mongoose": "^4.9.5",
+    "mustache-express": "^1.2.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cvalenzuela/polybius.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cvalenzuela/polybius/issues"
+  },
+  "homepage": "https://github.com/cvalenzuela/polybius#readme"
+}
