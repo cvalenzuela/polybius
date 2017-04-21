@@ -16,7 +16,7 @@ var path = require('path');
 var app = express();
 
 /*  Mongodb */
-mongoose.connect("mongodb://localhost/soccerPlayers");
+mongoose.connect("mongodb://localhost/polybius");
 var db = mongoose.connection;
 db.once('open', function(){
   console.log("Connected to database")
@@ -24,24 +24,18 @@ db.once('open', function(){
 db.on('error', console.error.bind(console, 'Database connection error:'));
 
 // Schema
-var soccerPlayers = mongoose.Schema({
-  name: {
+var webSchema = mongoose.Schema({
+  url: {
     type: String,
     trim: true
   },
-  club: {
+  date: {
     type: String,
     trim: true
   }
 })
 // Mongoose model
-var Player = mongoose.model('Player', soccerPlayers);
-
-var arturo = new Player({
-  name: 'Arturo Vidal',
-  club: 'Bayern Munich'
-})
-console.log(arturo)
+var webpageModel = mongoose.model('webpages', webSchema);
 
 /*  Middleware */
 // Views for mustache
@@ -64,21 +58,27 @@ app.get(BASE, function(req, res){
 });
 
 // Form
-app.post(BASE+'form', function(req, res){
-  post.name = req.body.name;
-  res.render('form.mustache');
+app.get(BASE+'hello', function(req, res){
+  console.log('Requested: hello')
+  res.render('index.mustache');
 });
 
 // database
-app.get(BASE+'database', function(req, res){
+app.post(BASE+'savepage', function(req, res){
+  var query = req.body.name;
 
-  var promise = arturo.save();
+  var newweb = new webpageModel({
+    url: query,
+    date: Date()
+  })
+
+  var promise = newweb.save();
 
   promise.then(function(user) {
     console.log("saved to db")
   })
   .then(function(user) {
-    console.log('updated user: ');
+    console.log('Ready for next query');
     // do something with updated user
   })
   .catch(function(err){
@@ -86,12 +86,7 @@ app.get(BASE+'database', function(req, res){
     console.log('error:', err);
   });
 
-  // Soccer.find({}, function(err, results){
-  //   if(err){
-  //     res.send("Nothing on the database")
-  //   }
-  //   return res.json({data:results})
-  // })
+  res.send("Polybius has done the job!, I just saved " + query + " into the database")
 
 });
 
