@@ -3,9 +3,10 @@ Polybius
 Web archiving for journalists
 Version 0.0.1
 
-cvalenzuela
+cvalenzuela & kadallah
 */
 
+//required for databasing
 var express = require('express');
 var mustache = require('mustache-express');
 var bodyParser = require('body-parser');
@@ -13,7 +14,15 @@ var mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 var http = require('http'); //?
 var path = require('path');
-var app = express();
+var expressApp = express();
+
+//required for Electron/UI
+const electron = require('electron')
+const electronApp = electron.app
+const BrowserWindow = electron.BrowserWindow
+const url = require('url')
+
+//Insert Electron Form stuff here! ---------------------------------
 
 /*  Mongodb */
 mongoose.connect("mongodb://localhost/soccerPlayers");
@@ -24,14 +33,22 @@ db.once('open', function(){
 db.on('error', console.error.bind(console, 'Database connection error:'));
 
 // Schema
-var soccerPlayers = mongoose.Schema({
-  name: {
+var links = mongoose.Schema({
+  source: {
     type: String,
     trim: true
   },
-  club: {
+  title: {
     type: String,
     trim: true
+  },
+  url: {
+  	type: String,
+  	trim: true
+  },
+  date: {
+  	type: String,
+  	trim: true
   }
 })
 // Mongoose model
@@ -45,32 +62,32 @@ console.log(arturo)
 
 /*  Middleware */
 // Views for mustache
-app.engine('mustache', mustache());
-app.set('view engine', 'mustache');
-app.set('views', __dirname + '/views');
-app.use('/assets', express.static('assets'))
+expressApp.engine('mustache', mustache());
+expressApp.set('view engine', 'mustache');
+expressApp.set('views', __dirname + '/views');
+expressApp.use('/assets', express.static('assets'))
 
 // Body parser
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({extended:true}));
+expressApp.use(bodyParser.json())
+expressApp.use(bodyParser.urlencoded({extended:true}));
 
 const BASE = '/';
 
 /*  Routes */
 // Main
-app.get(BASE, function(req, res){
+expressApp.get(BASE, function(req, res){
   console.log('Requested: index')
   res.render('index.mustache');
 });
 
 // Form
-app.post(BASE+'form', function(req, res){
+expressApp.post(BASE+'form', function(req, res){
   post.name = req.body.name;
   res.render('form.mustache');
 });
 
 // database
-app.get(BASE+'database', function(req, res){
+expressApp.get(BASE+'database', function(req, res){
 
   var promise = arturo.save();
 
@@ -95,7 +112,7 @@ app.get(BASE+'database', function(req, res){
 
 });
 
-var server = app.listen(8080, function(){
+var server = expressApp.listen(8080, function(){
   let host = server.address().address;
   let port = server.address().port;
   console.log("Listening on port", host, port)
