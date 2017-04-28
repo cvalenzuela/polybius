@@ -1,6 +1,23 @@
-# Polybius
+SAVE WEBPAGES BEFORE THEY GET DELETED
 
-Web archiving for journalists
+Polybius is a tool that lets you archive webpages so that if the page is deleted or changed, you still have a copy of the original version. Even better, you can get alerts every time a page is altered.
 
-#### Polybius and Sources
-In the seventh volume of his Histories, Polybius defines the historian's job as the analysis of documentation, the review of relevant geographical information, and political experience. Polybius held that historians should only chronicle events whose participants the historian was able to interview, and was among the first to champion the notion of factual integrity in historical writing. In Polybius' time, the profession of a historian required political experience (which aided in differentiating between fact and fiction) and familiarity with the geography surrounding one's subject matter to supply an accurate version of events. Polybius himself exemplified these principles as he was traveled and possessed political and military experience. He did not neglect written sources that proved essential material for his histories from the period from 264 BC to 220 BC. When addressing events after 220 BC, he examined the writings of Greek and Roman historians to acquire credible sources of information, but rarely did he name those sources. (Wikipedia)
+Better still, it’s free, open source and super easy to use!
+
+How it works
+
+When you see a page you want archived, just add it to your list like a bookmark. You have the option to save it just that one time, or to have the software track the page going forward, so that every time the page is altered, it will save each version of the page as a separate file. You can set it up so that you get an SMS alert or a Slack notification every time there’s an alteration. 
+
+See a crucial change that you need to show a colleague? No problem, you have the option of sharing it with them. 
+
+You also have the choice of storing these webpages on our server or your own, depending on your security needs and internet connectivity status. The files are encrypted, and you can set it to backup to a remote location of your choice. 
+
+Setup
+
+The team
+
+Polybius was built by New York University students Cristobal Valenzuela, Kadallah Burrowes and Sanjana Gupta, under the supervision of their professor Harlow Holmes, in the interest of public security. 
+
+
+
+
