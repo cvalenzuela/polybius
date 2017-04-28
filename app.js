@@ -6,6 +6,8 @@ Version 0.0.1
 cvalenzuela
 */
 
+// routes, router, schema and way to organize data, mongodb scale and size, security and login, sessions wiht passport
+
 // Libraries
 const express = require('express');
 const exphbs = require('express-handlebars');
@@ -70,7 +72,6 @@ db.once('open', function(){
   console.log("---- Ready! ----")
 })
 db.on('error', console.error.bind(console, 'Database connection error:'));
-
 
 // Routes
 routes(app)

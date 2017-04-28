@@ -4,7 +4,7 @@ const uuidV1 = require('uuid/v1');
 var passport = require('passport');
 var Account = require('./models/account');
 var Webpages = require('./models/webpages');
-var router = require('express').Router();
+//var router = require('express').Router();
 
 module.exports = function(app){
   var sess;
