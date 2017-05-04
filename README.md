@@ -1,5 +1,3 @@
-# Polybius
-
 ![logo](public/images/logo@small.jpg)
 
 Polybius is a tool that lets you save webpages and compare them over time. It is main goal is to help journalist and activist document, track and analyze fragile digital content.
