@@ -34,8 +34,6 @@ A experimental alpha version is online at:
 
 ## Polybius: the name
 
-![epa](public/images/polybius.jpg)
-
 Polybius was a Greek historian of the Hellenistic period.
 
 > "In the seventh volume of his Histories, Polybius defines the historian's job as the analysis of documentation, the review of relevant geographical information, and political experience" [source](https://en.wikipedia.org/wiki/Polybius)
