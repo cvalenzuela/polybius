@@ -17,6 +17,7 @@ TODO
 ## Polybius: the name
 
 ![epa](public/images/polybius.jpg)
+
 The stele of Kleitor depicting Polybius, Hellenistic art, 2nd century BC, Museum of Roman Civilization [source](https://en.wikipedia.org/wiki/Polybius)
 
 Polybius was a Greek historian of the Hellenistic period.
