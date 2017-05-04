@@ -14,17 +14,6 @@ TODO
 
 TODO
 
-## Polybius: the name
-
-![epa](public/images/polybius.jpg)
-
-The stele of Kleitor depicting Polybius, Hellenistic art, 2nd century BC, Museum of Roman Civilization [source](https://en.wikipedia.org/wiki/Polybius)
-
-Polybius was a Greek historian of the Hellenistic period.
-
-> "In the seventh volume of his Histories, Polybius defines the historian's job as the analysis of documentation, the review of relevant geographical information, and political experience" [source](https://en.wikipedia.org/wiki/Polybius)
-
-
 ## Stack and Setup
 
 Polybius uses MongoDB, Express 4.X, Angular 1.X and Node 6.X.
@@ -42,3 +31,11 @@ A experimental alpha version is online at:
   - `cd polybius`
   - `npm start`
   - Visit `localhost:3000`
+
+## Polybius: the name
+
+![epa](public/images/polybius.jpg)
+
+Polybius was a Greek historian of the Hellenistic period.
+
+> "In the seventh volume of his Histories, Polybius defines the historian's job as the analysis of documentation, the review of relevant geographical information, and political experience" [source](https://en.wikipedia.org/wiki/Polybius)
