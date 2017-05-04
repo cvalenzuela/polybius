@@ -1,17 +1,45 @@
 # Polybius
 
-Polybius is a tool that lets you archive webpages so that if the page is deleted or changed, you still have a copy of the original version. You can get alerts every time a page is altered.
+![logo](public/images/logo@small.jpg)
 
-Better still, it’s free, open source and super easy to use!
+Polybius is a tool that lets you save webpages and compare them over time. It is main goal is to help journalist and activist document, track and analyze fragile digital content.
 
-## How it works
+Polybius is not intended to be a repository of pages or a web archive. It's designed to help track and monitor relevant changes in information during specific periods of time.
 
-When you see a page you want archived, just add it to your list like a bookmark. You have the option to save it just that one time, or to have the software track the page going forward, so that every time the page is altered, it will save each version of the page as a separate file. You can set it up so that you get an SMS alert or a Slack notification every time there’s an alteration.
+## Fundamentals
 
-See a crucial change that you need to show a colleague? No problem, you have the option of sharing it with them.
+![epa](public/images/epa.jpg)
 
-You also have the choice of storing these webpages on our server or your own, depending on your security needs and internet connectivity status. The files are encrypted, and you can set it to backup to a remote location of your choice.
+TODO
 
-## Setup
+## Usage
 
-WIP
+TODO
+
+## Polybius: the name
+
+![epa](public/images/polybius.jpg)
+The stele of Kleitor depicting Polybius, Hellenistic art, 2nd century BC, Museum of Roman Civilization [source](https://en.wikipedia.org/wiki/Polybius)
+
+Polybius was a Greek historian of the Hellenistic period.
+
+> "In the seventh volume of his Histories, Polybius defines the historian's job as the analysis of documentation, the review of relevant geographical information, and political experience" [source](https://en.wikipedia.org/wiki/Polybius)
+
+
+## Stack and Setup
+
+Polybius uses MongoDB, Express 4.X, Angular 1.X and Node 6.X.
+
+### Online Version:
+
+A experimental alpha version is online at:
+
+[polybius.3laab.com](polybius.3laab.com)
+
+### Local Installation:
+  - [Install MongoDB](https://www.mongodb.com/lp/download/mongodb-enterprise?jmp=nav)
+  - [Install Node and NPM](https://docs.npmjs.com/getting-started/installing-node)
+  - Clone this repo: `https://github.com/cvalenzuela/polybius.git`
+  - `cd polybius`
+  - `npm start`
+  - Visit `localhost:3000`

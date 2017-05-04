@@ -1,0 +1,63 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+button{
+  display: block;
+  margin: 20px 0px 0px 0px;
+  background: white;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+button:focus{
+  background: black;
+  color:white;
+  outline:none;
+}
+
+input{
+  padding: 10px;
+  margin: 0px 0px 10px 0px;
+}
+
+input[type="submit"]{
+  display: inherit;
+  margin: 5vh 0px 0px 0px;
+}
+
+#top{
+  margin-top: 3vh;
+}
+
+#logo img{
+  margin: 10px 0px 0px 0px;
+  padding: 0px;
+  min-width: 130px;
+}
+
+#mainView{
+  margin-top: 20px;
+}
+
+#addButton{
+  background: black;
+  color: white;
+  border: none;
+}
+
+#message{
+  margin: 10px 0px 0px 0px;
+  background: rgba(92, 193, 92, 0.91);
+  padding: 10px;
+  color: white;
+  display: inline-block;
+}
+
+.tracking{
+  margin: 0px 0px 15px 0px;
+}

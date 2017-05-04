@@ -1,0 +1,30 @@
+<!-- Main profile page -->
+
+<div class="col-xs-10 col-xs-offset-1" id="top">
+  <div class="col-xs-4 col-sm-2 col-md-2 col-lg-2">
+    <div id="logo">
+      <a href="/"><img class="img-responsive" src="images/logo.jpg" /></a>
+    </div>
+  </div>
+
+  <div class="col-xs-6 col-sm-4 col-md-2 col-md-offset-7 col-xs-offset-2 col-sm-offset-6 text-right">
+      <span>{{user.local.name}}</span><br>
+      <span>{{user.local.organization}}</span><br>
+      <span class="fa fa-sign-out"><a href="/logout">Sign out</a></span>
+    <hr>
+  </div>
+
+</div>
+
+<div class="col-xs-4 col-md-2 col-xs-offset-0 col-md-offset-2">
+  <button type="button" id="tracking">Tracking</button>
+  <button type="button" id="add">Add Track</button>
+  <button type="button" id="logs">Search</button>
+  <button type="button" id="trending">Trending</button>
+  <button type="button" id="Settings">Settings</button>
+</div>
+
+<div class="col-xs-5" id="mainView">
+</div>
+
+<script src="javascripts/routes.js"></script>

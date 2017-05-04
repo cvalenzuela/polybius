@@ -1,0 +1,62 @@
+<form id="addNew">
+  <p>Name</p>
+  <input type="text" name="name" placeholder="EPA">
+  <p>URL to track</p>
+  <input type="text" name="url" placeholder="https://www.epa.gov/">
+  <p>Type</p>
+  <input type="text" name="type" placeholder="government, environment">
+  <p>Until</p>
+  <input type="date" name="until">
+  <input type="submit" value="Submit" id="addButton">
+</form>
+
+<p id="message"></p>
+
+<script>
+$("#message").hide();
+
+$('input#addButton').click(function(event) {
+  event.preventDefault();
+  $.ajax({
+    url: 'user/add',
+    type: 'POST',
+    dataType: 'text',
+    data: $('form#addNew').serialize(),
+    success: function(data) {
+      if(data == 'error'){
+        $("#message").css("background-color", "red");
+        data = 'Your form is not correct, please check the inputs'
+      }
+      else{
+        $("#message").css("background-color", "rgba(92, 193, 92, 0.91)");
+      }
+      $("#message").show();
+      $("#message").html(data);
+    }
+  });
+});
+
+  // $("#addNew").submit(function(event) {
+  //   event.preventDefault();
+  //   console.log(event)
+  //   // console.log(event)
+  //   // $.post("user/add",{
+  //   //   name: "Donald Duck",
+  //   //   city: "Duckburg"
+  //   // },
+  //   // function(data, status){
+  //   //   alert("Data: " + data + "\nStatus: " + status);
+  //   // });
+  //
+  //   $.ajax({
+  //     async: true,
+  //     type: "POST",
+  //     url: "user/add",
+  //     contentType: "application/x-www-form-urlencoded",
+  //   }).done(function(data) {
+  //     console.log(data)
+  //     $("#mainView").html(data);
+  //   });
+  //
+  // });
+</script>

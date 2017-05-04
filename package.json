@@ -1,36 +1,26 @@
 {
-  "name": "polybius",
-  "version": "1.0.0",
-  "description": "Web archiving for journalists",
-  "main": "server.js",
+  "name": "Polybius",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
   "dependencies": {
-    "body-parser": "^1.17.1",
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "~1.17.1",
+    "connect-flash": "^0.1.1",
     "connect-mongo": "^1.3.2",
-    "cookie-parser": "^1.4.3",
-    "express": "^4.15.2",
-    "express-handlebars": "^3.0.0",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.3",
+    "express": "~4.15.2",
+    "express-hbs": "^1.0.4",
     "express-session": "^1.15.2",
-    "mongoose": "^4.9.5",
-    "nedb-session-store": "^1.1.1",
+    "hbs": "~4.0.1",
+    "mongoose": "^4.9.7",
+    "morgan": "~1.8.1",
     "passport": "^0.3.2",
     "passport-local": "^1.0.0",
-    "passport-local-mongoose": "^4.0.0",
-    "passport-twitter": "^1.0.4",
-    "uuid": "^3.0.1"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cvalenzuela/polybius.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/cvalenzuela/polybius/issues"
-  },
-  "homepage": "https://github.com/cvalenzuela/polybius#readme"
+    "scrape-it": "^3.3.2",
+    "serve-favicon": "~2.4.2"
+  }
 }

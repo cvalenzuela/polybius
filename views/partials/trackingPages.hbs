@@ -1,0 +1,22 @@
+<!-- Main View -->
+
+{{#if trackingPages}}
+
+  {{#each trackingPages}}
+    <h4><a href="#">{{this.name}}</a></h4>
+    <h6>{{this.url}}</h6>
+    <h6>{{this.type}}</h6>
+    <form class="tracking">
+      <input type="radio" name="track" value="true" checked> Track
+      <input type="radio" name="track" value="false"> Untrack
+    </form>
+    <p>Last 30 days: 43 changes</p>
+    <p>Average: 2 changes per day</p>
+    <p>Remove</p>
+    <hr>
+  {{/each}}
+
+{{else}}
+
+<p>You are currently not tracking any pages </p>
+{{/if}}
