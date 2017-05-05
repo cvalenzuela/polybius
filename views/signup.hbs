@@ -1,27 +1,28 @@
-<div class="col-sm-8 col-sm-offset-2">
+<div class="col-sm-4 col-sm-offset-4">
   <div class="jumbotron text-center">
-    <h1><span class="fa fa-sign-in"></span> Signup</h1>
-
+    <a href="/"><img id="frontimage" src="/images/logo.jpg" /></a>
+    <h3><span class="fa fa-sign-in"></span> Signup</h3>
+    <hr>
     {{#if message}}
       <div class="alert-danger">{{message}}</div>
     {{/if}}
 
     <form action="/signup" method="post">
       <div class="form-group">
-          <label>Name</label>
-          <input type="text" class="form-control" name="name"/>
+          <h5>Name</h5>
+          <input type="text" class="form-control inputText" name="name"/>
       </div>
       <div class="form-group">
-          <label>Organization</label>
-          <input type="text" class="form-control" name="organization"/>
+          <h5>Organization</h5>
+          <input type="text" class="form-control inputText" name="organization"/>
       </div>
       <div class="form-group">
-          <label>Email</label>
-          <input type="email" class="form-control" name="email"/>
+          <h5>Email</h5>
+          <input type="email" class="form-control inputText" name="email"/>
       </div>
       <div class="form-group">
-        <label>Password</label>
-        <input type="password" class="form-control" name="password"/>
+        <h5>Password</h5>
+        <input type="password" class="form-control inputText" name="password"/>
       </div>
       <div>
         <input type="submit" class="form-control" value="Submit"/>
@@ -32,3 +33,11 @@
   <span class="fa fa-sign-in"> Already have an account?<a href="/login"> Login</a></span>
   <p>Or go <a href="/">home</a>.</p>
 </div>
+
+
+<footer class="navbar-default navbar-fixed-bottom">
+  <div class="container-fluid col-xs-10 col-xs-offset-1">
+    <h6 class="col-xs-2"> Polybius V.0.0.1</h6>
+    <a href="https://github.com/cvalenzuela/polybius" target="_blank" class="pull-right"><h6>Documentation</h6></a>
+  </div>
+</footer>

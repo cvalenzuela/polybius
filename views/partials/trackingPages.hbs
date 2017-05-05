@@ -3,7 +3,7 @@
 {{#if trackingPages}}
 
   {{#each trackingPages}}
-    <h4><a href="#">{{this.name}}</a></h4>
+    <h4><a href="/user/page/{{this.name}}" id="linkPage">{{this.name}}</a></h4>
     <h6>{{this.url}}</h6>
     <h6>{{this.type}}</h6>
     <form class="tracking">
@@ -12,11 +12,13 @@
     </form>
     <p>Last 30 days: 43 changes</p>
     <p>Average: 2 changes per day</p>
+    <p>Update</p>
     <p>Remove</p>
     <hr>
   {{/each}}
 
 {{else}}
 
-<p>You are currently not tracking any pages </p>
+  <p>You are currently not tracking any pages </p>
+
 {{/if}}

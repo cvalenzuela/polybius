@@ -1,13 +1,23 @@
 <form id="addNew">
-  <p>Name</p>
+  <p>Unique Name</p>
   <input type="text" name="name" placeholder="EPA">
   <p>URL to track</p>
   <input type="text" name="url" placeholder="https://www.epa.gov/">
   <p>Type</p>
   <input type="text" name="type" placeholder="government, environment">
+  <p>Track every</p>
+  <select name="time" id="time">
+    <option value="10">10 seconds (debug mode)</option>
+    <option value="360">6 minutes</option>
+    <option value="1800">30 minutes</option>
+    <option value="3600">1 hour</option>
+    <option value="18000">5 hours</option>
+  </select>
   <p>Until</p>
-  <input type="date" name="until">
+  <input type="date" name="until" value="2017-05-04"><br />
+  <input type="checkbox" name="notify" value="yes"> Notify by email
   <input type="submit" value="Submit" id="addButton">
+
 </form>
 
 <p id="message"></p>
@@ -18,7 +28,7 @@ $("#message").hide();
 $('input#addButton').click(function(event) {
   event.preventDefault();
   $.ajax({
-    url: 'user/add',
+    url: '/user/add',
     type: 'POST',
     dataType: 'text',
     data: $('form#addNew').serialize(),
@@ -36,27 +46,4 @@ $('input#addButton').click(function(event) {
   });
 });
 
-  // $("#addNew").submit(function(event) {
-  //   event.preventDefault();
-  //   console.log(event)
-  //   // console.log(event)
-  //   // $.post("user/add",{
-  //   //   name: "Donald Duck",
-  //   //   city: "Duckburg"
-  //   // },
-  //   // function(data, status){
-  //   //   alert("Data: " + data + "\nStatus: " + status);
-  //   // });
-  //
-  //   $.ajax({
-  //     async: true,
-  //     type: "POST",
-  //     url: "user/add",
-  //     contentType: "application/x-www-form-urlencoded",
-  //   }).done(function(data) {
-  //     console.log(data)
-  //     $("#mainView").html(data);
-  //   });
-  //
-  // });
 </script>

@@ -1,5 +1,4 @@
-<!-- Main profile page -->
-
+{{!< default}}
 <div class="col-xs-10 col-xs-offset-1" id="top">
   <div class="col-xs-4 col-sm-2 col-md-2 col-lg-2">
     <div id="logo">
@@ -16,17 +15,34 @@
 
 </div>
 
-<div class="col-xs-4 col-md-2 col-xs-offset-0 col-md-offset-2">
-  <button type="button" id="tracking">Tracking</button>
-  <button type="button" id="add">Add Track</button>
-  <button type="button" id="logs">Search</button>
-  <button type="button" id="trending">Trending</button>
-  <button type="button" id="Settings">Settings</button>
-</div>
+<div id="wrapper">
+  <div class="col-xs-5 col-xs-offset-2 container clear-top" id="main">
+    <h2>{{name}}</h2>
+    <h5>Tracking URL: {{url}}</h5>
+    <h5>Tags: {{type}}</h5>
+    <h5>Track Until: {{until}}</h5>
+    <hr />
 
-<div class="col-xs-5" id="mainView">
-  <h3>Welcome Back {{user.local.name}}</h3>
-  <hr />
+    <h4>Versions</h4>
+    {{#each htmls}}
+      <a href="display/version/{{../docId}}/{{this._id}}" ><p>Version {{@index}}</p></a>
+    {{/each}}
+    <hr />
+    <h4>Last Changes</h4>
+    <h5>Added</h5>
+    {{#each add}}
+    <p class="added">{{this}}</p>
+    {{/each}}
+
+    <h5>Removed</h5>
+    {{#each remove}}
+    <p class="removed">{{this}}</p>
+    {{/each}}
+    <hr />
+
+    <h4>View All Changes</h4>
+
+  </div>
 </div>
 
 <footer class="navbar-default navbar-fixed-bottom">
@@ -35,5 +51,3 @@
     <a href="https://github.com/cvalenzuela/polybius" target="_blank" class="pull-right"><h6>Documentation</h6></a>
   </div>
 </footer>
-
-<script src="/javascripts/routes.js"></script>

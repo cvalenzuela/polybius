@@ -1,15 +1,14 @@
 /*
-Handling Routes with jquery
+Handling Routes with jquery in client
 This should be moved to Angular
 */
-
 
 // Tracking View
 $("#tracking").click(function() {
   $.ajax({
     async: true,
     type: "GET",
-    url: "user/tracking",
+    url: "/user/tracking/",
     contentType: "application/html"
   }).done(function(data) {
     $("#mainView").html(data);
@@ -21,7 +20,7 @@ $("#add").click(function() {
   $.ajax({
     async: true,
     type: "GET",
-    url: "user/add",
+    url: "/user/add/",
     contentType: "application/html"
   }).done(function(data) {
     $("#mainView").html(data);
